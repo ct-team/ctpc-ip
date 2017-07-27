@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script src="http://static.tcy365.com/cdn/seajs/3.0.0/sea.js"></script>
+<script src=""  type="text/javascript"></script>
+<script>
+
+    define('main', function(require) {
+        var ip = require('ip');
+        var ips = "192.224.230.90";
+        var int=1000;
+        console.log(ip.ip2int(ips));
+        console.log(ip.int2ip(int));
+    });
+
+    seajs.config({
+        alias: {
+            'ip': 'http://192.168.1.26:8080/FD_PCLibrary/utils/ip/1.0.0/ip.js'
+        }
+    });
+    seajs.use('main');
+</script>
+</body>
+</html>
